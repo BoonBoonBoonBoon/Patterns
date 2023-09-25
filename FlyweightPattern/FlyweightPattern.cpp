@@ -15,7 +15,7 @@ void AddSalary(vector<int>& salaries)
 }
 
 // Print salary at index
-void PrintSalary(vector<int>& salaries, int index)
+void PrintSalary(vector<int> salaries, int index)
 {
     cout << index << ": " << salaries[index] << endl;
 }
