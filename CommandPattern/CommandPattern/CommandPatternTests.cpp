@@ -13,18 +13,18 @@ public:
     ~Command();
     
     virtual void Execute() = 0;
-    virtual void Undo() = 0;
 };
 
 class  UsePotionCommand : public Command
 {
-   // UsePotionCommand():
+    UsePotionCommand():
 
     void Execute() override {std::cout << playerName << " used a "<< potionName << " potion."<< std::endl;}
 };
 
+
 // Class for a potion
-class Potion : Command
+class Potion
 {
 public:
     // Potion constructor and destructor
@@ -41,7 +41,7 @@ public:
 };
 
 // Player class
-class Player : Command
+class Player 
 {
 public:
     // Potion constructor and destructor

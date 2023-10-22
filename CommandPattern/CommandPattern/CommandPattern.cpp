@@ -2,7 +2,11 @@
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
+
 #include <iostream>
+
+// Method call wrapped in an object
+
 
 // Command interface
 class Command
@@ -13,18 +17,18 @@ public:
     ~Command();
     
     virtual void Execute() = 0;
-    virtual void Undo() = 0;
 };
 
 class  UsePotionCommand : public Command
 {
-   // UsePotionCommand():
-
     void Execute() override {std::cout << playerName << " used a "<< potionName << " potion."<< std::endl;}
+
+        
 };
 
+
 // Class for a potion
-class Potion : Command
+class Potion
 {
 public:
     // Potion constructor and destructor
@@ -41,7 +45,7 @@ public:
 };
 
 // Player class
-class Player : Command
+class Player 
 {
 public:
     // Potion constructor and destructor
